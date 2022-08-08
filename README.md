@@ -1,6 +1,5 @@
 - 👋 Hi, I’m @MI-Thierry
 - 👀 I’m interested in software base system development
-- 🌱 I’m currently learning how to use multiple programming languages in development
 - 💞️ I’m looking to collaborate on any software implementation
 - 📫 How to reach me ...
 
