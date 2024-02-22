@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @MI-Thierry
-- 👀 I’m interested in software base system development
+- 👀 I’m interested in desktop and web application development
 - 💞️ I’m looking to collaborate on any software implementation
 - 📫 How to reach me ...
 
