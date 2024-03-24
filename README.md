@@ -11,10 +11,12 @@ I'm Muhirwa I. Thierry, a passionate developer with a love for desktop and web a
 - **Contributions:** Check out my contributions to open-source projects.
 - **Repositories:** Dive into the code behind my projects and experiments.
   
-## 🌟 Let's Connect:
+## 🌟 You can connect with me here:
 
 - **X:** Follow me on [Twitter](https://twitter.com/mthierry421) for updates and tech insights.
 - **LinkedIn:** Let's connect on [LinkedIn](https://www.linkedin.com/in/mi-thierry/) and expand our professional network.
+- **Phone:** Call me on my phone (+250) 798 642 230
+- **Email:** Email me on *mithierry1010@gmail.com*
 
 ## 💬 Get in Touch:
 
