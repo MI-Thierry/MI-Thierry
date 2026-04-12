@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Thierry I. Muhirwa | Full-Stack .NET & Flutter Expert</title>
+  <meta name="description"
+    content="5+ years of experience building integrated web & mobile systems with ASP.NET, Blazor, and Flutter. Specialized in AI Agentic workflows.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mithierry.com/">
+  <meta property="og:title" content="Thierry I. Muhirwa | Full-Stack & Mobile Developer">
+  <meta property="og:description"
+    content="Building seamless, integrated digital ecosystems using .NET, Flutter, and AI.">
+  <meta property="og:image" content="https://mithierry.com/dev-social.jpg">
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://mithierry.com/">
+  <meta property="twitter:title" content="Thierry I. Muhirwa | Full-Stack & Mobile Developer">
+  <meta property="twitter:description"
+    content="Building seamless, integrated digital ecosystems using .NET, Flutter, and AI.">
+  <meta property="twitter:image" content="https://mithierry.com/dev-social.jpg">
+
+  <base href="/" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.svg" />
+</head>
+
+<body class="bg-white dark:bg-gray-950">
+  <header id="scrolled-appbar"
+    class="fixed z-50 flex w-full flex-row items-center border-b border-gray-950/5 bg-white/30 px-6 py-2 text-gray-950 backdrop-blur-sm transition duration-300 ease-in-out lg:px-16 dark:border-white/10 dark:bg-gray-950/55 dark:text-white dark:shadow-gray-700/50">
+    <h2
+      class="font-custom text-center text-xl font-semibold tracking-tighter text-gray-950 md:text-left md:text-4xl dark:text-white">
+      Thierry</h2>
+    <div class="grow"></div>
+    <nav class="hidden flex-row items-center gap-6 md:flex">
+      <a class="text-sm/6 font-medium text-gray-950 dark:text-white" href="#home">Home</a>
+      <a class="text-sm/6 font-medium text-gray-950 dark:text-white" href="#about">About</a>
+      <a class="text-sm/6 font-medium text-gray-950 dark:text-white" href="#services">Services</a>
+      <a class="text-sm/6 font-medium text-gray-950 dark:text-white" href="#work">Work</a>
+      <a class="text-sm/6 font-medium text-gray-950 dark:text-white" href="#contacts">Contacts</a>
+    </nav>
+    <div class="grow"></div>
+
+    <a href="https://www.upwork.com/freelancers/~019998b43adb926b83?mp_source=share" target="_blank" rel="noopener"
+      type="button"
+      class="mx-auto box-border hidden w-fit items-center gap-2 rounded-full px-4 py-1.5 text-sm leading-5 font-medium text-gray-950 shadow-xs ring ring-gray-950 ring-inset hover:ring-2 md:mx-0 md:inline-flex dark:text-white dark:ring-white">
+      Contact Me.
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+        <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+      </svg>
+    </a>
+
+    <button type="button"
+      class="mx-auto me-1 box-border inline-flex w-fit items-center gap-2 rounded-full px-4 py-1.5 text-sm leading-5 font-medium text-gray-950 shadow-xs ring ring-gray-950 ring-inset hover:ring-2 md:mx-0 md:hidden dark:text-white dark:ring-white">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 640 640" fill="currentColor">
+        <path
+          d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z" />
+      </svg>
+    </button>
+
+    <button onclick="openMobileNavbar()" type="button"
+      class="mx-auto box-border inline-flex w-fit items-center gap-2 rounded-full px-4 py-1.5 text-sm leading-5 font-medium text-gray-950 shadow-xs ring ring-gray-950 ring-inset hover:ring-2 md:mx-0 md:hidden dark:text-white dark:ring-white">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+        <path
+          d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z" />
+      </svg>
+    </button>
+  </header>
+
+  <div id="overlay" class="pointer-events-none fixed z-100 h-screen w-screen"></div>
+  <nav id="mobile-navbar"
+    class="fixed top-0 z-150 flex w-full -translate-y-60 flex-col items-center gap-6 bg-white/55 py-4 shadow-lg shadow-gray-300/50 backdrop-blur-sm transition duration-300 md:hidden dark:bg-gray-950/55 dark:shadow-gray-700/50">
+    <a class="text-sm font-medium text-gray-950 dark:text-white" href="#home">Home</a>
+    <a class="text-sm font-medium text-gray-950 dark:text-white" href="#about">About</a>
+    <a class="text-sm font-medium text-gray-950 dark:text-white" href="#services">Services</a>
+    <a class="text-sm font-medium text-gray-950 dark:text-white" href="#projects">Projects</a>
+    <a class="text-sm font-medium text-gray-950 dark:text-white" href="#contacts">Contacts</a>
+  </nav>
+
+  <main class="pt-10">
+    <section
+      class="grid-flow-row grid-cols-2 place-items-center gap-2 from-sky-600/15 to-sky-800/15 px-6 py-10 even:bg-linear md:grid md:px-10 md:py-16 lg:px-16 dark:from-sky-700/10 dark:to-sky-900/10"
+      id="home">
+      <div class="flex flex-col items-center gap-2">
+        <h1
+          class="font-custom text-center text-3xl font-semibold text-gray-950 md:text-left md:text-4xl dark:text-white">
+          Full-Stack & Mobile App Developer | Flutter, ASP.NET & Blazor
+        </h1>
+        <h2 class="text-center text-lg text-gray-900 md:text-left md:text-xl dark:text-gray-300">
+          Your users interact with your platform across a dozen different devices.
+          I bridge that gap by building seamless, integrated systems that deliver your services
+          to smartphones, tablets, and desktops alike.
+        </h2>
+        <a href="#about" type="button"
+          class="mx-auto box-border inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-sm leading-5 font-medium text-gray-950 shadow-xs ring ring-gray-950 ring-inset hover:ring-2 focus:outline-none md:mx-0 dark:text-white dark:ring-white">
+          About Me
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+            fill="currentColor">
+            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="absolute top-0 -z-50 h-full w-screen rounded-full bg-linear-65 from-sky-600 to-sky-800 opacity-20 blur-3xl">
+      </div>
+      <div class="relative hidden md:block">
+        <img src="hero.png" alt="Hero Image" />
+      </div>
+    </section>
+
+    <section
+      class="from-sky-600/15 to-sky-800/0 px-6 py-10 even:bg-linear-0 md:px-10 md:py-16 lg:px-16 dark:from-sky-700/10 dark:to-sky-900/0"
+      id="about">
+      <div class="grid grid-flow-col grid-rows-2 gap-4 md:grid-flow-row md:grid-cols-2 md:grid-rows-1">
+        <div class="relative h-full">
+          <div
+            class="absolute -z-50 h-full w-full rounded-full bg-linear-65 from-sky-600 to-sky-800 opacity-20 blur-3xl">
+          </div>
+          <div class="h-full bg-[url(/dev.png)] mask-b-from-70% mask-b-to-100% bg-contain bg-center bg-no-repeat">
+          </div>
+        </div>
+        <div class="font-custom flex flex-col gap-2 text-gray-800 dark:text-gray-300">
+          <h2 class="font-custom text-3xl font-semibold text-gray-950 md:text-4xl dark:text-white">
+            About Me.
+          </h2>
+          <h3>
+            I am Thierry I. Muhirwa, a <span class="me-2 font-bold">Full-Stack and Mobile Application Developer</span>
+            with over <span class="me-2 font-bold">5 years of experience</span>in the software engineering industry.
+            I specialize in building scalable, high-performance systems where reliability, security,
+            and usability are paramount—<span class="me-2 font-bold">integrating AI strategically</span> to drive
+            efficiency and enhance the user
+            experience.
+          </h3>
+          <h6>Tech stacks:</h6>
+          <ul class="list-inside list-disc">
+            <li><span class="me-2 font-bold">Web & Backend:</span>ASP.NET Core, Blazor, C#, Entity
+              Framework, and RESTful APIs.</li>
+            <li><span class="me-2 font-bold">Mobile Development:</span>Flutter and Dart</li>
+            <li><span class="me-2 font-bold">Intelligence Layer:</span>Microsoft Agent Framework for agentic
+              AI integration.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="from-sky-600/15 to-sky-800/15 px-6 py-10 even:bg-linear-65 md:px-10 md:py-16 lg:px-16 dark:from-sky-700/10 dark:to-sky-900/10"
+      id="services">
+      <h2 class="font-custom mb-2 text-3xl font-semibold text-gray-950 md:text-4xl dark:text-white">
+        Services
+      </h2>
+      <div class="flex flex-col gap-4 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3">
+        <div class="rounded-xl border border-red-200 bg-red-100 p-4 dark:border-red-900/20 dark:bg-red-700/20">
+          <h3 class="font-custom inline-flex items-center text-2xl font-semibold text-gray-950 dark:text-white">
+            <span class="me-2 flex min-h-10 min-w-10 items-center rounded-full bg-red-500 text-white">
+              <svg class="m-auto h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 576 512">
+                <path
+                  d="M348.8 32C340.7 46.1 336 62.5 336 80l0 16-272 0 0 224 272 0 0 64-272 0c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l284.8 0zM336 432c0 17.5 4.7 33.9 12.8 48L120 480c-13.3 0-24-10.7-24-24s10.7-24 24-24l216 0zM432 32l96 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-352c0-26.5 21.5-48 48-48zm24 64c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0zm56 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+              </svg>
+            </span>
+            Full-Stack Solutions
+          </h3>
+          <p class="font-custom ms-6 text-gray-800 dark:text-gray-300">
+            I build end-to-end platforms where <span class="me-2 font-bold">web and mobile applications</span> work in
+            perfect sync.
+            By leveraging <span class="font-semibold">ASP.NET Core, Blazor, and Flutter</span>, I ensure
+            your services are always within reach of your users,
+            providing a seamless transition from desktop to mobile.
+          </p>
+        </div>
+
+        <div
+          class="rounded-xl border border-orange-200 bg-orange-100 p-4 dark:border-orange-900/20 dark:bg-orange-700/20">
+          <h3 class="font-custom mb-2 inline-flex items-center text-2xl font-semibold text-gray-950 dark:text-white">
+            <span class="me-2 flex min-h-10 min-w-10 items-center rounded-full bg-orange-500 text-white">
+              <svg class="m-auto h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor">
+                <path
+                  d="M80 0C44.7 0 16 28.7 16 64l0 384c0 35.3 28.7 64 64 64l224 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L80 0zm72 416l80 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
+              </svg>
+            </span>
+            Mobile Applications
+          </h3>
+          <p class="font-custom ms-6 text-gray-800 dark:text-gray-300">
+            I design and integrate <span class="me-2 font-bold">native-quality iOS and Android</span>
+            applications into new or existing infrastructures. Using <span class="font-semibold">Flutter</span>,
+            I deliver <span class="me-2 font-bold">"pixel-perfect" interfaces</span>and
+            <span class="me-2 font-bold">fluid animations</span>that don't just look good—they
+            make accessing your services fast, intuitive, and frictionless.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-lime-200 bg-lime-100 p-4 dark:border-lime-900/20 dark:bg-lime-700/20">
+          <h3 class="font-custom mb-2 inline-flex items-center text-2xl font-semibold text-gray-950 dark:text-white">
+            <span class="me-2 flex min-h-10 min-w-10 items-center rounded-full bg-lime-500 text-white">
+              <svg class="m-auto h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0c17.7 0 32 14.3 32 32l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-82.7-169.4 169.4c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160 384 160z" />
+              </svg>
+            </span>
+            Web Applications & Admin Portals
+          </h3>
+          <p class="font-custom ms-6 text-gray-800 dark:text-gray-300">
+            I build modern, responsive web systems using <span class="font-semibold">ASP.NET Core</span> and
+            <span class="font-semibold">Blazor</span>.
+            My focus is on turning complex data into actionable insights through custom dashboards and
+            monitoring tools,
+            giving you total control over your organization’s activities in one centralized place.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-green-200 bg-green-100 p-4 dark:border-green-900/20 dark:bg-green-700/20">
+          <h3 class="font-custom mb-2 inline-flex items-center text-2xl font-semibold text-gray-950 dark:text-white">
+            <span class="me-2 flex min-h-10 min-w-10 items-center rounded-full bg-green-500 text-white">
+              <svg class="m-auto h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M248 106.6c18.9-9 32-28.3 32-50.6c0-30.9-25.1-56-56-56s-56 25.1-56 56c0 22.3 13.1 41.6 32 50.6l0 98.8c-2.8 1.3-5.5 2.9-8 4.7l-80.1-45.8c1.6-20.8-8.6-41.6-27.9-52.8C57.2 96 23 105.2 7.5 132S1.2 193 28 208.5c1.3 .8 2.6 1.5 4 2.1l0 90.8c-1.3 .6-2.7 1.3-4 2.1C1.2 319-8 353.2 7.5 380S57.2 416 84 400.5c19.3-11.1 29.4-32 27.8-52.8l50.5-28.9c-11.5-11.2-19.9-25.6-23.8-41.7L88 306.1c-2.6-1.8-5.2-3.3-8-4.7l0-90.8c2.8-1.3 5.5-2.9 8-4.7l80.1 45.8c-.1 1.4-.2 2.8-.2 4.3c0 22.3 13.1 41.6 32 50.6l0 98.8c-18.9 9-32 28.3-32 50.6c0 30.9 25.1 56 56 56s56-25.1 56-56c0-22.3-13.1-41.6-32-50.6l0-98.8c2.8-1.3 5.5-2.9 8-4.7l80.1 45.8c-1.6 20.8 8.6 41.6 27.8 52.8c26.8 15.5 61 6.3 76.5-20.5s6.3-61-20.5-76.5c-1.3-.8-2.7-1.5-4-2.1l0-90.8c1.4-.6 2.7-1.3 4-2.1c26.8-15.5 36-49.7 20.5-76.5S390.8 96 364 111.5c-19.3 11.1-29.4 32-27.8 52.8l-50.6 28.9c11.5 11.2 19.9 25.6 23.8 41.7L360 205.9c2.6 1.8 5.2 3.3 8 4.7l0 90.8c-2.8 1.3-5.5 2.9-8 4.6l-80.1-45.8c.1-1.4 .2-2.8 .2-4.3c0-22.3-13.1-41.6-32-50.6l0-98.8z" />
+              </svg>
+            </span>
+            AI Agents and Chatbots
+          </h3>
+          <p class="font-custom ms-6 text-gray-800 dark:text-gray-300">
+            I develop single and multi-agent applications that allow users to interact with your platform
+            via natural language, bypassing complex UIs.
+            Using the <span class="font-semibold">Microsoft Agentic Framework</span>, I implement <span
+              class="font-semibold">RAG (Retrieval-Augmented Generation)</span> and <span class="font-semibold">Semantic
+              Search</span>
+            to help your users find exactly what they need fast and easily.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-blue-200 bg-blue-100 p-4 dark:border-blue-900/20 dark:bg-blue-700/20">
+          <h3 class="font-custom mb-2 inline-flex items-center text-2xl font-semibold text-gray-950 dark:text-white">
+            <span class="me-2 flex min-h-10 min-w-10 items-center rounded-full bg-blue-500 text-white">
+              <svg class="m-auto h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M80 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm32.4 97.2c28-12.4 47.6-40.5 47.6-73.2 0-44.2-35.8-80-80-80S0 35.8 0 80c0 32.8 19.7 61 48 73.3l0 205.3C19.7 371 0 399.2 0 432 0 476.2 35.8 512 80 512s80-35.8 80-80c0-32.8-19.7-61-48-73.3l0-86.6c26.7 20.1 60 32 96 32l86.7 0c12.3 28.3 40.5 48 73.3 48 44.2 0 80-35.8 80-80s-35.8-80-80-80c-32.8 0-61 19.7-73.3 48L208 240c-49.9 0-91-38.1-95.6-86.8zM80 408a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM344 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
+              </svg>
+            </span>
+            DevOps & Cloud Deployment
+          </h3>
+          <p class="font-custom ms-6 text-gray-800 dark:text-gray-300">
+            I handle the heavy lifting of getting your code to the world.
+            From configuring secure CI/CD pipelines to deploying on <span class="font-semibold">Azure, AWS,
+              or Firebase,</span> I ensure your apps are live, secure, and reliable.
+            I also manage the entire submission process for the <span class="font-semibold">Apple App
+              Store</span> and <span class="font-semibold">Google Play Store</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="from-sky-600/15 to-sky-800/15 px-6 py-10 even:bg-linear-65 md:px-10 md:py-16 lg:px-16 dark:from-sky-700/10 dark:to-sky-900/10"
+      id="contacts">
+      <div
+        class="grid grid-flow-col grid-rows-2 place-items-start gap-4 md:grid-flow-row md:grid-cols-2 md:grid-rows-1">
+        <h3 class="font-custom my-auto text-lg font-semibold text-gray-950 md:text-2xl dark:text-white">
+          Let's turn your vision into a high-performance reality. Reach out today and let's start building.
+        </h3>
+        <div class="font-custom flex flex-col gap-2 text-gray-800 dark:text-gray-300">
+          <h2 class="font-custom text-xl font-semibold text-gray-950 md:text-2xl dark:text-white">Contacts:
+          </h2>
+          <ul>
+            <li>
+              <a href="mailto:info@mithierry.com" class="inline-flex items-center">
+                <span class="me-2">
+                  <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                      d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z" />
+                  </svg>
+                </span>
+                info@mithierry.com
+              </a>
+            </li>
+            <li>
+              <a class="inline-flex items-center" href="https://www.linkedin.com/in/mi-thierry/" target="_blank"
+                rel="noopener">
+                <span class="me-2">
+                  <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                      d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z" />
+                  </svg>
+                </span>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="inline-flex items-center" href="https://github.com/MI-Thierry" target="_blank" rel="noopener">
+                <span class="me-2">
+                  <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM252.8 8c-138.7 0-244.8 105.3-244.8 244 0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1 100-33.2 167.8-128.1 167.8-239 0-138.7-112.5-244-251.2-244zM105.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                  </svg>
+                </span>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a class="inline-flex items-center" href="https://x.com/mthierry421" target="_blank" rel="noopener">
+                <span class="me-2">
+                  <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                      d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z" />
+                  </svg>
+                </span>
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a class="inline-flex items-center"
+                href="https://www.upwork.com/freelancers/~019998b43adb926b83?mp_source=share" target="_blank"
+                rel="noopener">
+                <span class="me-2">
+                  <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path
+                      d="M493.9 295.6c-50.3 0-83.5-38.9-92.8-53.9 11.9-95.3 46.8-125.4 92.8-125.4 45.5 0 80.9 36.4 80.9 89.7s-35.4 89.7-80.9 89.7l0-.1zm0-237.8c-81.9 0-127.8 53.4-141 108.4-14.9-28-25.9-65.5-34.5-100.3l-113.2 0 0 141c0 51.1-23.3 89-68.8 89s-71.6-37.8-71.6-89l.5-141-65.3 0 0 141c0 41.1 13.3 78.4 37.6 105.1 25 27.5 59.2 41.8 98.8 41.8 78.8 0 133.8-60.4 133.8-146.9l0-94.8c8.2 31.2 27.8 91.1 65.3 143.6l-35 199.4 66.4 0 23.1-141.3c7.6 6.3 15.7 12 24.2 17 22.2 14 47.7 21.9 73.9 22.8 0 0 4 .2 6.1 .2 81.2 0 145.9-62.9 145.9-147.8S575.3 57.9 494.1 57.9l-.2-.1z" />
+                  </svg>
+                </span>
+                Hire me
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="src/main.js"></script>
+  <script type="application/ld+json">
+        {
+        "@@context": "https://schema.org/",
+        "@@type": "Person",
+        "name": "Thierry I. Muhirwa",
+        "url": "https://mithierry.runasp.net",
+        "image": "https://mithierry.runasp.net/dev-social.jpg",
+        "sameAs": [
+        "https://www.linkedin.com/in/mi-thierry/",
+        "https://github.com/MI-Thierry",
+        "https://www.upwork.com/freelancers/~019998b43adb926b83?mp_source=share"
+        ],
+        "jobTitle": "Full-Stack & Mobile Application Developer",
+        "knowsAbout": ["ASP.NET Core", "Flutter", "Blazor", "AI Agents", "C#", "Clean Architecture"]
+        }
+    </script>
+</body>
+
+</html>
