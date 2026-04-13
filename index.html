@@ -115,15 +115,14 @@
     </section>
 
     <section
-      class="from-sky-600/15 to-sky-800/0 px-6 py-10 even:bg-linear-0 md:px-10 md:py-16 lg:px-16 dark:from-sky-700/10 dark:to-sky-900/0"
+      class="from-sky-600/15 to-sky-800/0 px-6 pt-10 overflow-x-clip even:bg-linear-0 md:px-10 md:pt-16 lg:px-16 dark:from-sky-700/10 dark:to-sky-900/0"
       id="about">
-      <div class="grid grid-flow-col grid-rows-2 gap-4 md:grid-flow-row md:grid-cols-2 md:grid-rows-1">
-        <div class="relative h-full">
+      <div class="md:grid flex flex-col gap-1 md:gap-4 md:grid-flow-row md:grid-cols-2 md:grid-rows-1">
+        <div class="relative">
           <div
-            class="absolute -z-50 h-full w-full rounded-full bg-linear-65 from-sky-600 to-sky-800 opacity-20 blur-3xl">
+            class="absolute -z-50 h-full w-full bg-linear-65 from-sky-600 to-sky-800 mask-[url(/mask.png)] rotate-45 mask-contain overflow-clip">
           </div>
-          <div class="h-full bg-[url(/dev.png)] mask-b-from-70% mask-b-to-100% bg-contain bg-center bg-no-repeat">
-          </div>
+          <img src="dev.png" style="height: 30rem;" class="w-full object-top mx-auto object-cover" />
         </div>
         <div class="font-custom flex flex-col gap-2 text-gray-800 dark:text-gray-300">
           <h2 class="font-custom text-3xl font-semibold text-gray-950 md:text-4xl dark:text-white">
@@ -150,7 +149,7 @@
     </section>
 
     <section
-      class="from-sky-600/15 to-sky-800/15 px-6 py-10 even:bg-linear-65 md:px-10 md:py-16 lg:px-16 dark:from-sky-700/10 dark:to-sky-900/10"
+      class="from-sky-600/15 bg-white dark:bg-gray-950 to-sky-800/15 px-6 py-10 even:bg-linear-65 md:px-10 md:py-16 lg:px-16 dark:from-sky-700/10 dark:to-sky-900/10"
       id="services">
       <h2 class="font-custom mb-2 text-3xl font-semibold text-gray-950 md:text-4xl dark:text-white">
         Services
