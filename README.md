@@ -3,7 +3,7 @@
 I'm thrilled to have you here! This is where I share my coding adventures, projects, and contributions to the open-source community.
 
 ## 👨‍💻 About Me:
-I'm Muhirwa I. Thierry, a passionate developer with a love for mobile and web application development. My journey in the world of programming is fueled by curiosity and a drive to create meaningful solutions.
+I'm Muhirwa I. Thierry, a talented full-stack, mobile and AI developer. My journey in the world of programming is fueled by curiosity and a drive to create meaningful solutions to humanity.
 
 ## 🚀 What You'll Find Here:
 
@@ -20,6 +20,6 @@ I'm Muhirwa I. Thierry, a passionate developer with a love for mobile and web ap
 
 ## 💬 Get in Touch:
 
-Have questions, suggestions, or just want to say hi? Feel free to reach out via email or GitHub Discussions.
+Have questions, suggestions, or just want to say hi? Feel free to reach out via email or GitHub Discussions. For more information about what I do visit my website https://mithierry.com
 
 🎉 Thank you for stopping by! Feel free to explore and let's geek out over code together! 🎉
