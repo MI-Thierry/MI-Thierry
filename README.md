@@ -3,7 +3,7 @@
 I'm thrilled to have you here! This is where I share my coding adventures, projects, and contributions to the open-source community.
 
 ## 👨‍💻 About Me:
-I'm Muhirwa I. Thierry, a talented full-stack, mobile and AI developer. My journey in the world of programming is fueled by curiosity and a drive to create meaningful solutions to humanity.
+I'm Thierry I. Muhirwa, a talented full-stack, mobile and AI developer. My journey in the world of programming is fueled by curiosity and a drive to create meaningful solutions to humanity.
 
 ## 🚀 What You'll Find Here:
 
