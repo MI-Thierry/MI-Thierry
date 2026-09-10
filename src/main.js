@@ -1,5 +1,6 @@
 const scrolledAppbar = document.getElementById("scrolled-appbar");
 let lastScrollPosition = 0;
+
 window.onscroll = (event) => {
   if (window.scrollY > 200) {
     const diff = window.scrollY - lastScrollPosition;
@@ -33,4 +34,33 @@ window.openMobileNavbar = () => {
     overlay.classList.remove("pointer-events-auto");
     overlay.classList.add("pointer-events-none");
   })
+}
+
+window.openContactModal = () => {
+  const modal = document.getElementById("contacts-modal");
+  const modalOverlay = document.getElementById("modal-overlay");
+  modalOverlay.classList.remove("pointer-events-none");
+  modalOverlay.classList.add("pointer-events-auto");
+  modalOverlay.classList.remove("opacity-0");
+  modalOverlay.classList.add("opacity-100");
+  modalOverlay.addEventListener("click", window.closeContactModal);
+
+  requestAnimationFrame(() => {
+    modal.classList.remove('scale-95', 'opacity-0');
+    modal.classList.add('scale-100', 'opacity-100');
+  });
+}
+
+window.closeContactModal = () => {
+  const modal = document.getElementById("contacts-modal");
+  const modalOverlay = document.getElementById("modal-overlay");
+
+  modalOverlay.classList.remove("pointer-events-auto");
+  modalOverlay.classList.add("pointer-events-none");
+  modalOverlay.classList.remove("opacity-100")
+  modalOverlay.classList.add("opacity-0");
+  modalOverlay.removeEventListener("click", window.closeContactModal);
+
+  modal.classList.remove('scale-100', 'opacity-100');
+  modal.classList.add('scale-95', 'opacity-0');
 }

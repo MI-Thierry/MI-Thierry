@@ -103,25 +103,16 @@
     </nav>
     <div class="grow"></div>
 
-    <a href="https://www.upwork.com/freelancers/~019998b43adb926b83?mp_source=share" target="_blank" rel="noopener"
-      type="button"
+    <button id="open-contact-modal" onclick="openContactModal()"
       class="mx-auto box-border hidden w-fit items-center gap-2 rounded-full px-4 py-1.5 text-sm leading-5 font-medium text-gray-950 shadow-xs ring ring-gray-950 ring-inset hover:ring-2 md:mx-0 md:inline-flex dark:text-white dark:ring-white">
-      Contact Me.
+      Contact Me
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
         <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
       </svg>
-    </a>
-
-    <a href="https://www.upwork.com/freelancers/~019998b43adb926b83?mp_source=share" target="_blank" rel="noopener"
-      class="mx-auto me-1 box-border inline-flex w-fit items-center gap-2 rounded-full px-4 py-1.5 text-sm leading-5 font-medium text-gray-950 shadow-xs ring ring-gray-950 ring-inset hover:ring-2 md:mx-0 md:hidden dark:text-white dark:ring-white">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 640 640" fill="currentColor">
-        <path
-          d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z" />
-      </svg>
-    </a>
+    </button>
 
     <button onclick="openMobileNavbar()" type="button"
-      class="mx-auto box-border inline-flex w-fit items-center gap-2 rounded-full px-4 py-1.5 text-sm leading-5 font-medium text-gray-950 shadow-xs ring ring-gray-950 ring-inset hover:ring-2 md:mx-0 md:hidden dark:text-white dark:ring-white">
+      class="mx-auto box-border inline-flex w-fit items-center gap-2 rounded-full px-4 py-1.5 text-sm leading-5 font-medium text-gray-950 ring-gray-950 ring-inset hover:ring-2 md:mx-0 md:hidden dark:text-white dark:ring-white">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
         <path
           d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z" />
@@ -130,6 +121,9 @@
   </header>
 
   <div id="overlay" class="fixed w-screen h-screen pointer-events-none z-100"></div>
+  <div id="modal-overlay"
+    class="bg-gray-200/55 dark:bg-gray-950/55 opacity-0 fixed w-screen h-screen pointer-events-none z-100 transition-all duration-200">
+  </div>
   <nav id="mobile-navbar"
     class="fixed top-0 flex flex-col items-center w-full gap-6 py-4 transition duration-300 shadow-lg z-150 -translate-y-60 bg-white/55 shadow-gray-300/50 backdrop-blur-sm md:hidden dark:bg-gray-950/55 dark:shadow-gray-700/50">
     <a class="text-sm font-medium text-gray-950 dark:text-white" href="#home">Home</a>
@@ -138,6 +132,81 @@
     <a class="text-sm font-medium text-gray-950 dark:text-white" href="#projects">Projects</a>
     <a class="text-sm font-medium text-gray-950 dark:text-white" href="#contacts">Contacts</a>
   </nav>
+
+  <div id="contacts-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+    class="dark:shadow-gray-700/50 shadow-gray-300/50 fixed top-2/5 right-8/25 z-150 w-full max-w-md rounded-xl bg-white dark:bg-gray-950 p-6 shadow-md scale-95 opacity-0 transition-all duration-200">
+    <div class="flex items-start justify-between mb-4">
+      <h2 class="font-semibold text-center font-custom text-gray-950 md:text-left md:text-2xl text-xl dark:text-white">
+        Contact Me</h2>
+      <button id="close-contact-modal" onclick="closeContactModal()" aria-label="Close modal"
+        class="text-slate-400 hover:text-slate-600 text-xl leading-none">
+        &times;
+      </button>
+    </div>
+
+    <div class="text-gray-800 font-custom dark:text-gray-300">
+      <ul>
+        <li>
+          <a href="mailto:info@mithierry.com" class="inline-flex items-center">
+            <span class="me-2">
+              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                  d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z" />
+              </svg>
+            </span>
+            info@mithierry.com
+          </a>
+        </li>
+        <li>
+          <a class="inline-flex items-center" href="https://www.linkedin.com/in/mi-thierry/" target="_blank"
+            rel="noopener">
+            <span class="me-2">
+              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z" />
+              </svg>
+            </span>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a class="inline-flex items-center" href="https://www.instagram.com/mthierry421" target="_blank"
+            rel="noopener">
+            <span class="me-2">
+              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg>
+            </span>
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a class="inline-flex items-center" href="https://x.com/mthierry421" target="_blank" rel="noopener">
+            <span class="me-2">
+              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z" />
+              </svg>
+            </span>
+            X(Twitter)
+          </a>
+        </li>
+        <li>
+          <a class="inline-flex items-center" href="https://github.com/MI-Thierry" target="_blank" rel="noopener">
+            <span class="me-2">
+              <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM252.8 8c-138.7 0-244.8 105.3-244.8 244 0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1 100-33.2 167.8-128.1 167.8-239 0-138.7-112.5-244-251.2-244zM105.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+              </svg>
+            </span>
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
 
   <main class="pt-10">
     <section class="from-sky-600/15 to-sky-800/15 even:bg-linear dark:from-sky-700/10 dark:to-sky-900/10" id="home">
@@ -389,19 +458,6 @@
                   </svg>
                 </span>
                 GitHub
-              </a>
-            </li>
-            <li>
-              <a class="inline-flex items-center"
-                href="https://www.upwork.com/freelancers/~019998b43adb926b83?mp_source=share" target="_blank"
-                rel="noopener">
-                <span class="me-2">
-                  <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                    <path
-                      d="M493.9 295.6c-50.3 0-83.5-38.9-92.8-53.9 11.9-95.3 46.8-125.4 92.8-125.4 45.5 0 80.9 36.4 80.9 89.7s-35.4 89.7-80.9 89.7l0-.1zm0-237.8c-81.9 0-127.8 53.4-141 108.4-14.9-28-25.9-65.5-34.5-100.3l-113.2 0 0 141c0 51.1-23.3 89-68.8 89s-71.6-37.8-71.6-89l.5-141-65.3 0 0 141c0 41.1 13.3 78.4 37.6 105.1 25 27.5 59.2 41.8 98.8 41.8 78.8 0 133.8-60.4 133.8-146.9l0-94.8c8.2 31.2 27.8 91.1 65.3 143.6l-35 199.4 66.4 0 23.1-141.3c7.6 6.3 15.7 12 24.2 17 22.2 14 47.7 21.9 73.9 22.8 0 0 4 .2 6.1 .2 81.2 0 145.9-62.9 145.9-147.8S575.3 57.9 494.1 57.9l-.2-.1z" />
-                  </svg>
-                </span>
-                Hire me
               </a>
             </li>
           </ul>
